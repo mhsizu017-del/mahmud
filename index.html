@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANGFORGE | Shape Your Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forge: {
+                primary: '#FF1A1A', // Vibrant Red (The Flame)
+                secondary: '#800000', // Dark Red (The Shield)
+                dark: '#050505',
+                slate: '#1a1a1a',
+                accent: '#FFFFFF', // White
+                metal: '#e2e8f0', // Silver/Metal
+              }
+            },
+            fontFamily: {
+              cinzel: ['Cinzel', 'serif'],
+              rajdhani: ['Rajdhani', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+              'float': 'float 6s ease-in-out infinite',
+              'rise': 'rise 2s ease-in infinite',
+              'flame-wave': 'flame-wave 3s ease-in-out infinite',
+              'flame-flicker': 'flame-flicker 0.2s ease-in-out infinite alternate',
+              'core-pulse': 'core-pulse 2s ease-in-out infinite',
+              'heat-pulse': 'heat-pulse 2s ease-in-out infinite',
+            },
+            keyframes: {
+              glow: {
+                '0%': { boxShadow: '0 0 5px #FF1A1A' },
+                '100%': { boxShadow: '0 0 20px #FF1A1A, 0 0 10px #800000' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              rise: {
+                '0%': { opacity: '0', transform: 'translateY(0) scale(0.5)' },
+                '20%': { opacity: '0.8' },
+                '100%': { opacity: '0', transform: 'translateY(-50px) scale(1.2)' },
+              },
+              'flame-wave': {
+                '0%, 100%': { transform: 'scale(1) skewX(0deg)' },
+                '25%': { transform: 'scale(1.02) skewX(-1deg)' },
+                '50%': { transform: 'scale(1) skewX(0deg)' },
+                '75%': { transform: 'scale(1.02) skewX(1deg)' },
+              },
+              'flame-flicker': {
+                '0%': { opacity: '0.95', transform: 'scale(1)' },
+                '100%': { opacity: '1', transform: 'scale(1.01)' },
+              },
+              'core-pulse': {
+                '0%, 100%': { opacity: '0.8', transform: 'scale(1)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+              },
+              'heat-pulse': {
+                '0%, 100%': { opacity: '0.6' },
+                '50%': { opacity: '0.8' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e2e8f0;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FF1A1A; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #DC2626; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
